@@ -22,6 +22,7 @@
 }
 
 window.onload = () => {
+    var a: number;
     var el = document.getElementById('content');
     var greeter = new Greeter(el);
     greeter.start();

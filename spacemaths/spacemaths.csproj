@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <ProjectGuid>{1FAB7C7B-7B92-4241-9AEA-918BC12A98A2}</ProjectGuid>
+    <ProjectGuid>{07EFEE5B-5C19-4BFE-A8E3-89F30B28345B}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <OutputPath>bin</OutputPath>
@@ -18,11 +18,41 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.css" />
+    <Content Include="assets\battery.png" />
+    <Content Include="assets\clock.png" />
+    <Content Include="assets\clock_arrow.png" />
+    <Content Include="assets\computer.png" />
+    <Content Include="assets\door.png" />
+    <Content Include="assets\engineer.png" />
+    <Content Include="assets\floor.png" />
+    <Content Include="assets\hand_left.png" />
+    <Content Include="assets\hand_right.png" />
+    <Content Include="assets\level1.png" />
+    <Content Include="assets\loader.png" />
+    <Content Include="assets\logo.png" />
+    <Content Include="assets\paper.png" />
+    <Content Include="assets\phaser-logo-small.png" />
+    <Content Include="assets\picture.png" />
+    <Content Include="assets\picture_frame.png" />
+    <Content Include="assets\simon.png" />
+    <Content Include="assets\table.png" />
+    <Content Include="assets\title.mp3" />
+    <Content Include="assets\titlepage.jpg" />
+    <Content Include="assets\wall.png" />
     <Content Include="index.html" />
+    <Content Include="source\phaser.min.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="source\Boot.ts" />
+    <TypeScriptCompile Include="source\Game.ts" />
+    <TypeScriptCompile Include="source\StageOffice.ts" />
+    <TypeScriptCompile Include="source\MainMenu.ts" />
+    <TypeScriptCompile Include="source\phaser.d.ts" />
+    <TypeScriptCompile Include="source\Engineer.ts" />
+    <TypeScriptCompile Include="source\Preloader.ts" />
+    <TypeScriptCompile Include="source\Utils.ts" />
   </ItemGroup>
   <ItemGroup>
     <None Include="web.Debug.config">
@@ -37,7 +67,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>spacemaths_test</RootNamespace>
+    <RootNamespace>spacemaths</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
@@ -47,9 +77,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50839</DevelopmentServerPort>
+          <DevelopmentServerPort>53437</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50839/</IISUrl>
+          <IISUrl>http://localhost:53437/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -63,7 +93,8 @@
     <TypeScriptTarget>ES5</TypeScriptTarget>
     <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
-    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptModuleKind>none</TypeScriptModuleKind>
+    <TypeScriptOutFile>game.js</TypeScriptOutFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <TypeScriptTarget>ES5</TypeScriptTarget>
